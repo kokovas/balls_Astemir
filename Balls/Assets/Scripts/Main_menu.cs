@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿/* Создаём главное меню игры включающее в себя кнопки перехода на доступные уровни и кнопку выхода из игры. */
+
+using UnityEngine;
 using System.Collections;
 
 public class Main_menu : MonoBehaviour {
@@ -9,19 +11,18 @@ public class Main_menu : MonoBehaviour {
 		// создаем окно главного меню игры
 		GUI.Box(new Rect(Screen.width/2-350, Screen.height/2-250, 700, 500), "МЕНЮ");
 
-		// создаем кнопки-уровни
+		// создаем кнопки перехода на доступные уровни
 		for (i=0; i<=numb/5; i++) {
 			for (j=0; j<=4; j++) {
 				if (GUI.Button(new Rect(Screen.width/2-315+j*130, Screen.height/2-170+i*50, 100, 40), "Уровень_"+(i*5+j+1))) { 
-					Application.LoadLevel("Game");	
+					Application.LoadLevel("Game");	// загружаем сцену "Game"
 				}
 			}
 		}
 
 		// выход из игры
 		if (GUI.Button(new Rect(Screen.width/2-100, Screen.height/2+195, 200, 40), "ВЫХОД")) { 
-			// выходим из игры 
-			Application.Quit();
+			Application.Quit();						// выходим из игры 
 		}
 	}
 }
