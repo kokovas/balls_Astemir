@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\bad_goose.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Spawner.cs">
     <Files>
-      <File FileName="Assets\Scripts\Spawner.cs" Line="1" Column="73" />
-      <File FileName="Assets\Scripts\Ray_C.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Main_menu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\bad_goose.cs" Line="4" Column="41" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="28" Column="3" />
+      <File FileName="Assets\Scripts\Ray_C.cs" Line="16" Column="1" />
+      <File FileName="Assets\Scripts\Main_menu.cs" Line="24" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
