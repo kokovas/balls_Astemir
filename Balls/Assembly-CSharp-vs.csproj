@@ -46,8 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Main_menu.cs" />
-     <Compile Include="Assets\Scripts\Ray_C.cs" />
+     <Compile Include="Assets\Scripts\ClickOnTheBall.cs" />
+     <Compile Include="Assets\Scripts\EndLevel.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

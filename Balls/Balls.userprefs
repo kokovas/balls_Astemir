@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Spawner.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenu.cs">
     <Files>
-      <File FileName="Assets\Scripts\Spawner.cs" Line="28" Column="3" />
-      <File FileName="Assets\Scripts\Ray_C.cs" Line="16" Column="1" />
-      <File FileName="Assets\Scripts\Main_menu.cs" Line="24" Column="18" />
+      <File FileName="Assets\Scripts\ClickOnTheBall.cs" Line="7" Column="32" />
+      <File FileName="Assets\Scripts\MainMenu.cs" Line="16" Column="80" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="8" Column="16" />
+      <File FileName="Assets\Scripts\EndLevel.cs" Line="14" Column="123" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
