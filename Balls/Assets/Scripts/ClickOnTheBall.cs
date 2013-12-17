@@ -30,7 +30,7 @@ public class ClickOnTheBall: MonoBehaviour {
 					// если номер тапнутого шарика на один больше чем номур удаленного то
 					if (int.Parse(aHit.collider.gameObject.transform.FindChild("number").gameObject.GetComponent<TextMesh>().text) == ballDestroy + 1) {
 						// проигрываем звук для тапнутого шарика
- 						//AudioSource.PlayClipAtPoint (ding, transform.position);
+ 						AudioSource.PlayClipAtPoint (ding, transform.position);
 						Destroy(aHit.collider.gameObject);				// удаляем этот объект
 						ballDestroy++;									// счетчик удалённых объектов
 						Score.score += 10;								// добавляем 10 очков за тапнутый шарик
@@ -38,7 +38,7 @@ public class ClickOnTheBall: MonoBehaviour {
 				}
 			} catch {
 				// добавляем в исключение ошибку при клике в пустое пространство
-				//AudioSource.PlayClipAtPoint (play, transform.position); // звук для промаха
+				AudioSource.PlayClipAtPoint (play, transform.position); // звук для промаха
 			}
 		}
 	}
