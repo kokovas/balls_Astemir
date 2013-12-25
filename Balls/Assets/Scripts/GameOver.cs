@@ -12,7 +12,7 @@ public class GameOver: MonoBehaviour {
 	
 	void OnGUI() {
 		// создаем окно главного меню игрыv
-		GUI.Box(new Rect(Screen.width / 2 - 350, Screen.height / 2 - 250, 700, 500), "(((_ПОРАЖКЕНИЕ_(((");
+		GUI.Box(new Rect(Screen.width / 2 - 350, Screen.height / 2 - 250, 700, 500), "(((_ПОРАЖЕНИЕ_(((");
 		
 		// создаём кнопу "Пройти заново уровень" и обрабатываем её нажатие
 		if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 50, 200, 40), "Пройти заново уровень " + MainMenu.levelNum)) { 

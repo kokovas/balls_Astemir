@@ -4,10 +4,19 @@ using UnityEngine;
 using System.Collections;
 
 public class ClickOnTheBall: MonoBehaviour {
-	public Camera cam1;													// задаем камеру
+	public static Camera cam1;                                   		// задаем камеру
 	public static int ballDestroy = 0;									// счетчик тапнутых шариков
 	public AudioClip ding;
 	public AudioClip play;
+
+	public static Camera getCamera()
+	{
+		if (cam1 == null) {
+			cam1 = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
+		}
+
+		return cam1;
+	}
 
 	void Update() {
 		if (ballDestroy >= MainMenu.ballAmt) {							// если шарики закончились то
@@ -20,15 +29,16 @@ public class ClickOnTheBall: MonoBehaviour {
 
 		if (Input.GetMouseButtonDown(0)) {								// обрабатываем клик мыши
 			RaycastHit2D aHit = new RaycastHit2D();						// инициализируем луч
-			
+
 			// проводим луч от камеры до места клика мышью
-			aHit = Physics2D.Raycast(cam1.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+			aHit = Physics2D.Raycast(getCamera().ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 			
 			try {
 				// если луч пресекает объект тег которого ball то
 				if(Input.GetMouseButtonDown(0) && (aHit.transform.tag == "ball")) {
 					// если номер тапнутого шарика на один больше чем номур удаленного то
 					if (int.Parse(aHit.collider.gameObject.transform.FindChild("number").gameObject.GetComponent<TextMesh>().text) == ballDestroy + 1) {
+						MainMenu.gameTimer += 0.5f;
 						// проигрываем звук для тапнутого шарика
  						AudioSource.PlayClipAtPoint (ding, transform.position);
 						Destroy(aHit.collider.gameObject);				// удаляем этот объект

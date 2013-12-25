@@ -15,9 +15,13 @@ public class Spawner: MonoBehaviour {
 		ballCount++;								// номер создаваемого шарика
 
 		// создаем объект-шарик из префаба
-		Rigidbody2D Balls = Instantiate(ball, new Vector2(Random.Range(-5.0F, 5.0F), Random.Range(-3.0F, 3.0F)), transform.rotation) as Rigidbody2D;	
-		Balls.rigidbody2D.velocity = new Vector2(Random.Range(-3F, 3F), Random.Range(-3F, 3F));		// задаем начальную скорость шарика
-		Balls.transform.FindChild("number").gameObject.GetComponent<TextMesh>().text=""+ballCount;	// задаём номер шарика
+		Rigidbody2D Balls = Instantiate(ball, 
+		                                new Vector2(Random.Range(-GameWindow.sizeX, GameWindow.sizeX), 
+		                                            Random.Range(-GameWindow.sizeY, GameWindow.sizeY)), 
+		                                transform.rotation) as Rigidbody2D;
+
+		Balls.rigidbody2D.velocity = new Vector2(Random.Range(-3F, 3F), Random.Range(-3F, 3F));			// задаем начальную скорость шарика
+		Balls.transform.FindChild("number").gameObject.GetComponent<TextMesh>().text = "" + ballCount;	// задаём номер шарика
 
 		if (ballCount >= MainMenu.ballAmt) {		// если шариков уже хватает
 			CancelInvoke("Spawn");					// то перестаем создавать новые

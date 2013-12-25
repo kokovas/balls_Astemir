@@ -11,5 +11,6 @@ public class GameTimer : MonoBehaviour {
 
 		MainMenu.gameTimer -= 1.0f * Time.deltaTime;					// каждую секунду отнимаем от заданного значения таймера 1
 		guiText.text = "ВРЕМЯ: " + MainMenu.gameTimer.ToString("f1");	// отображение значения таймера на экране
+		gameObject.transform.localPosition = new Vector2(0.01f, 0.90f);
 	}
 }
